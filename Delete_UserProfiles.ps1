@@ -1,7 +1,7 @@
 # Display menu and script information
 function Show-Menu {
     param (
-        [string]$Title = 'Automated User Profile Deletion Script'
+        [string]$Title = 'Automated User Profile Deletion Script V.0.1'
     )
     cls
     Write-Host "================ $Title ================"
