@@ -1,0 +1,11 @@
+$profiles = $null
+
+$profiles = Get-WMIObject -class Win32_UserProfile | Where {((!$_.Special) -and ($_.LocalPath -ne "C:\Users\Administrator")  -and ($_.LocalPath -ne "C:\Users\UpdatusUser"))}
+
+if ($profiles -ne $null) {
+    $profiles | Remove-WmiObject
+}
+
+Exit
+Comment
+ 
